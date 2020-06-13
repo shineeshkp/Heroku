@@ -30,7 +30,7 @@ import pickle
 # In[2]:
 
 
-glass = pd.read_csv("C:\Shineesh\Learning\MachineLearning\DS_FriendsMeetup\Back_order_prediction\deployment\glass.csv")
+glass = pd.read_csv("glass.csv")
 glass.head()
 
 
@@ -126,9 +126,9 @@ y_preds= knn.predict(data_test)
 y_preds
 
 
-pickle.dump(knn, open('C:\Shineesh\Learning\MachineLearning\DS_FriendsMeetup\Back_order_prediction\deployment\model.pkl','wb'))
+pickle.dump(knn, open('model.pkl','wb'))
 
-model=pickle.load(open('C:\Shineesh\Learning\MachineLearning\DS_FriendsMeetup\Back_order_prediction\deployment\model.pkl', 'rb'))
+model=pickle.load(open('model.pkl', 'rb'))
 print(model.predict(data_test[1].reshape(1,-1)))
 print(model.predict(data_test[2].reshape(1,-1)))
 print(model.predict(data_test[10].reshape(1,-1)))
